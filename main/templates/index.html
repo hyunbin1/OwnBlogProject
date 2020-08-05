@@ -6,6 +6,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>OWN BLOG</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/index.css %}" />
   </head>
   <body>
     <!-- 게시물 추가 -->
@@ -26,6 +27,7 @@
     <a href="{% url 'detail' Ob.id %}">
       <div class="all_Ob">
         <p>{{Ob.title}}</p>
+        <p>{{Ob.image}}</p>
         <p>{{Ob.content}}</p>
         <p>{{Ob.update_at|date:"Y-m-d"}}</p>
       </div>

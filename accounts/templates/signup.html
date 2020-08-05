@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>회원가입</title>
+  </head>
+  <body>
+    <h1>회원가입</h1>
+
+    <form method="POST" action="">
+      {% csrf_token %}
+      <!-- 회원가입 입력창 -->
+      <div class="regi_form">
+        {{register_form.as_p}}
+      </div>
+      <!-- 회원가입 버튼 -->
+      <input type="submit" value="가입하기" />
+    </form>
+  </body>
+</html>

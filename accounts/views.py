@@ -12,6 +12,7 @@ def signup(request):
         if filled_form.is_valid():
             filled_form.save()
             return redirect('index')
+            
     return render(request, 'signup.html', {'register_form':register_form})
 
 
