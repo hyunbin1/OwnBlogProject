@@ -1,11 +1,11 @@
 from django import forms
-from .models import OB
+from .models import Ob
 
 # 모델폼을 상속받아서 모델폼이 되었음
-class OBFrom(forms.ModelForm):
+class ObFrom(forms.ModelForm):
 # 어떤 모델과 대응되는지 말해줌
     class Meta:
-        model = OB
+        model = Ob
         fields = ( "title", "image", "content")
 
 # 모델 폼 커스텀
@@ -16,6 +16,6 @@ class OBFrom(forms.ModelForm):
         self.fields['image'].label = "사진"
         self.fields['content'].label = "자기소개서 내용"
         self.fields['title'].widget.attrs.update({
-            'class': 'OB_title', 
+            'class': 'Ob_title', 
             'placeholder': '제목',
         })

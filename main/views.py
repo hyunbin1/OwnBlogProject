@@ -1,44 +1,44 @@
 from django.shortcuts import render
-from .forms import OB
-from .models import OB
+from .forms import Ob
+from .models import Ob
 from django.http import Http404
 # 로그인 데코레이터
 
 
 # index - 모든 글
 def index(request):
-    all_OB = OB.objects.all()
-    return render(request, 'index.html', {'all_OB':all_OB})
+    all_Ob = Ob.objects.all()
+    return render(request, 'index.html', {'all_Ob':all_Ob})
 
 # create - 게시물 작성
 def create(request):
     if request.method == "POST":
-        filled_form = OBForm(request.POST)
+        filled_form = ObForm(request.POST)
         if filled_form.is_valid():
+            filled_form.save()
             return redirect('index')
-    
-    OB_form = OBForm()
-    return render(request, ' create.html', {'OB_form':OB_form})
+    Ob_form = ObForm()
+    return render(request, ' create.html', {'Ob_form':Ob_form})
 
 
 # detail - 상세 페이지
-def detail(request, OB_id):
-    my_OB = get_object_or_404(OB, pk=OB_id)
-    return render(request, 'detail.html', {'my_OB':my_OB})
+def detail(request, Ob_id):
+    my_Ob = get_Object_or_404(Ob, pk=Ob_id)
+    return render(request, 'detail.html', {'my_Ob':my_Ob})
     
-def delete(request, OB_id):
-    my_OB = OB.objects.get(pk=jss_id)
-    my_OB.delete()
+def delete(request, Ob_id):
+    my_Ob = Ob.objects.get(pk=jss_id)
+    my_Ob.delete()
     return redirect('index')
     
 
-def update(request, OB_id):
-    my_OB = OB.objects.get(pk=OB_id)
-    OB_form = OBFrom(instance=my_OB)
+def update(request, Ob_id):
+    my_Ob = Ob.objects.get(pk=Ob_id)
+    Ob_form = ObFrom(instance=my_Ob)
     if request.method == "POST":
-        update_form = OBForm(request.POST, instance=my_OB)
+        update_form = ObForm(request.POST, instance=my_Ob)
         if update_form.is_valid():
             update_form.save()
             return redirect('index')
 
-    return render(request, 'create.html', {'OB_form':OB_form})
+    return render(request, 'create.html', {'Ob_form':Ob_form})

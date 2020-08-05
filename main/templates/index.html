@@ -9,7 +9,7 @@
   </head>
   <body>
     <!-- 게시물 추가 -->
-    <div class="make_OB">
+    <div class="make_Ob">
       <a href="{% url 'create' %}">
         <!-- 추가 버튼 -->
         <div class="plus_btn">
@@ -20,14 +20,14 @@
 
     <br />
 
-    {% for OB in all_OB %}
-    <!-- OB.id - 객체 번호를 같이 보내서 detail.html에서 
+    {% for Ob in all_Ob %}
+    <!-- Ob.id - 객체 번호를 같이 보내서 detail.html에서 
   특정한 객체번호에 해당되는 페이지만 나올 수 있게 링크를 걸어준다  -->
-    <a href="{% url 'detail' OB.id %}">
-      <div class="all_OB">
-        <p>{{OB.title}}</p>
-        <p>{{OB.content}}</p>
-        <p>{{OB.update_at|date:"Y-m-d"}}</p>
+    <a href="{% url 'detail' Ob.id %}">
+      <div class="all_Ob">
+        <p>{{Ob.title}}</p>
+        <p>{{Ob.content}}</p>
+        <p>{{Ob.update_at|date:"Y-m-d"}}</p>
       </div>
     </a>
     {% endfor %}

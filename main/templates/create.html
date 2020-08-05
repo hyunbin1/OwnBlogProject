@@ -10,7 +10,7 @@
     <form method="POST" action="">
       {% csrf_token %}
       <!-- views.py에서 만들어준 폼 정의 가져오기 -->
-      {{OB_form.as_p}}
+      {{Ob_form.as_p}}
       <input type="submit" value="확인" />
     </form>
   </body>

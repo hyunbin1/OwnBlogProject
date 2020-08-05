@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import OB
+from .models import Ob
 # Register your models here.
 
-admin.site.register(OB)
+admin.site.register(Ob)
