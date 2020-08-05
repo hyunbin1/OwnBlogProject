@@ -18,7 +18,7 @@ def create(request):
             filled_form.save()
             return redirect('index')
     Ob_form = ObForm()
-    return render(request, ' create.html', {'Ob_form':Ob_form})
+    return render(request, 'create.html', {'Ob_form':Ob_form})
 
 
 # detail - 상세 페이지
