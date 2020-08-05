@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect, get_object_or_404
-from .forms import Ob
+from .forms import ObForm
 from .models import Ob
 from django.http import Http404
 # 로그인 데코레이터

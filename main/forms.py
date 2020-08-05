@@ -2,7 +2,7 @@ from django import forms
 from .models import Ob
 
 # 모델폼을 상속받아서 모델폼이 되었음
-class ObFrom(forms.ModelForm):
+class ObForm(forms.ModelForm):
 # 어떤 모델과 대응되는지 말해줌
     class Meta:
         model = Ob
