@@ -23,7 +23,7 @@ def create(request):
 
 # detail - 상세 페이지
 def detail(request, Ob_id):
-    my_Ob = get_Object_or_404(Ob, pk=Ob_id)
+    my_Ob = get_object_or_404(Ob, pk=Ob_id)
     return render(request, 'detail.html', {'my_Ob':my_Ob})
     
 def delete(request, Ob_id):
