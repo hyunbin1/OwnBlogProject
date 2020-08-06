@@ -13,3 +13,7 @@ pip install Pillow
 3. migration 하기
 
 python manage.py migrate
+
+4. admin 계정 생성
+
+python manage.py createsuperuser
