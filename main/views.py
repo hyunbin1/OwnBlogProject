@@ -12,7 +12,7 @@ def index(request):
 
 # create - 게시물 작성
 def create(request):
-    if request.method == "POST":
+    if request.method =="POST":
         filled_form = ObForm(request.POST)
         if filled_form.is_valid():
             filled_form.save()
@@ -27,14 +27,14 @@ def detail(request, Ob_id):
     return render(request, 'detail.html', {'my_Ob':my_Ob})
     
 def delete(request, Ob_id):
-    my_Ob = Ob.objects.get(pk=jss_id)
+    my_Ob = Ob.objects.get(pk=Ob_id)
     my_Ob.delete()
     return redirect('index')
     
 
 def update(request, Ob_id):
     my_Ob = Ob.objects.get(pk=Ob_id)
-    Ob_form = ObFrom(instance=my_Ob)
+    Ob_form = ObForm(instance=my_Ob)
     if request.method == "POST":
         update_form = ObForm(request.POST, instance=my_Ob)
         if update_form.is_valid():
