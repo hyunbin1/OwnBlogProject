@@ -1,19 +1,67 @@
-<!DOCTYPE html>
-<html lang="ko">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>로그인</title>
-  </head>
-  <body>
-    <form method="POST" action="">
-      {% csrf_token %}
-      <!-- 장고에 저장되어 있는 로그인 폼 사용함 -->
-      <div class="login_form">
-        {{form.as_p}}
-      </div>
+{% load static %}
 
-      <input type="submit" value="로그인" />
-    </form>
-  </body>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'css/login.css' %}"
+    />
+    <script src="jquery-3.4.1.js"></script>
+</head>
+
+</head>
+
+<body>
+    <section class="login-form">
+        <h1>
+            LOGO DESIGN
+        </h1>
+        <form method="POST" action="" enctype="multipart/form-data">
+         {% csrf_token %}
+            <div class="int-area">
+                <input type="text" name="id" id="id" autocomplete="off" required>
+                <label for="id">USER NAME</label>
+            </div>
+            <div class="int-area">
+
+
+                <input type="password" name="pw" id="pw" autocomplete="off" required>
+                <label for="id">PASSWORD</label>
+            </div>
+            <div class="btn-area">
+                <button id="btn" type="submit">LOGIN</button>
+            </div>
+        </form>
+        <div class="caption">
+            <a href="">FORGOT PASSWORD?</a>
+        </div>
+    </section>
+    <script>
+        let id = $('#id');
+        let pw = $('#pw');
+        let btn = $('#pw');
+
+        $(btn).on('click', function () {
+            if ($(id).val() == "") {
+                $(id).net('label').addClass('warning');
+                setTimeout(function () {
+                    $('label').removeClass('warning');
+                }, 1500);
+
+            } else if ($(pw).val() == "") {
+                $(pw).net('label').addClass('warning');
+                setTimeout(function () {
+                    $('label').removeClass('warning');
+                }, 1500);
+            }
+        });
+    </script>
+</body>
+
 </html>
