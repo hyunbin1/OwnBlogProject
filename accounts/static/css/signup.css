@@ -36,6 +36,8 @@
   b,
   strong {
       font-weight: 700;
+      font-size: 32px;
+      margin-bottom: 60px;
   }
   
   .lead,
