@@ -8,12 +8,14 @@ def signup(request):
     # signup 으로 POST 요청이 왔을 때, 새로운 유저를 만드는 절차를 밟는다.
     if request.method == 'POST':
         # password와 confirm에 입력된 값이 같다면
-        if request.POST['password'] == request.POST['confirm']:
+        if request.POST['password'] == request.POST['password2']:
             # user 객체를 새로 생성
-            user = User.objects.create_user(username=request.POST['username'], password=request.POST['password'])
+            user = User.objects.create_user(
+                username=request.POST['username'], password=request.POST['password'])
             # 로그인 한다
             auth.login(request, user)
-            return redirect('/')
+            return redirect('index')
+        return render(request, 'signup.html')
     # signup으로 GET 요청이 왔을 때, 회원가입 화면을 띄워준다.
     return render(request, 'signup.html')
 
@@ -33,7 +35,7 @@ def login(request):
         if user is not None:
             # 로그인 한다
             auth.login(request, user)
-            return redirect('/')
+            return redirect('index')
         # 존재하지 않는다면
         else:
             # 딕셔너리에 에러메세지를 전달하고 다시 login.html 화면으로 돌아간다.
