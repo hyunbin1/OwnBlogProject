@@ -44,17 +44,8 @@ def login(request):
     else:
         return render(request, 'login.html')
 
-<<<<<<< HEAD
 # 로그 아웃
 def logout(request):
     request.session.clear()
-=======
-def main(request):
-    return render (request, 'main.html')
-    
-#로그인 기능 커스텀
-class MyLoginView(LoginView):
-    template_name = "login.html"
->>>>>>> 58ee025c406dbb60fd1d34478ea30bf70226f854
 
     return render(request, 'index.html')
