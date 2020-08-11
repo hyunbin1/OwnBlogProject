@@ -22,7 +22,7 @@
         <h1>
             LOGO DESIGN
         </h1>
-        <form method="POST" action="" enctype="multipart/form-data">
+        <form method="POST" action="{% url 'login'%}" enctype="multipart/form-data">
          {% csrf_token %}
             <div class="int-area">
                 <input type="text" name="id" id="id" autocomplete="off" required>
