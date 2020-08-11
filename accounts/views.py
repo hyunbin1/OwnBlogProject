@@ -16,6 +16,9 @@ def signup(request):
     return render(request, 'signup.html')
 
 
+def main(request):
+    return render (request, 'main.html')
+    
 #로그인 기능 커스텀
 class MyLoginView(LoginView):
     template_name = "login.html"
