@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import index, create, detail, delete, update
+from .views import index, create, detail, delete, update, main
 
 
 urlpatterns = [

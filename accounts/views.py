@@ -19,6 +19,12 @@ def signup(request):
     # signup으로 GET 요청이 왔을 때, 회원가입 화면을 띄워준다.
     return render(request, 'signup.html')
 
+<<<<<<< HEAD
+
+#로그인 기능 커스텀
+class MyLoginView(LoginView):
+    template_name = "login.html"
+=======
     
 # 로그인
 def login(request):
@@ -47,5 +53,6 @@ def login(request):
 # 로그 아웃
 def logout(request):
     request.session.clear()
+>>>>>>> 5725056c3737dd72abc19968662c6992af8daa2c
 
     return render(request, 'index.html')
