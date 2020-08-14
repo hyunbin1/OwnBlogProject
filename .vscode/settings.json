@@ -1,3 +1,7 @@
 {
+<<<<<<< HEAD
     "python.pythonPath": "c:\\Users\\User\\workspace\\OwnBlogProject\\venv\\Scripts\\python.exe"
+=======
+    "python.formatting.provider": "black"
+>>>>>>> 4add3c4a8e1ced17788c1f06ae43396bb5e18afc
 }
