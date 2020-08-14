@@ -3,7 +3,7 @@ from django.db import models
 
 class Ob(models.Model):
     title = models.CharField(max_length=50)
-    image = models.ImageField(blank=True)
+    image = models.ImageField(upload_to='images/')
     content = models.TextField(null=True)
     update_at = models.DateTimeField(auto_now=True)
 
