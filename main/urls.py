@@ -1,12 +1,7 @@
 from django.urls import path
-<<<<<<< HEAD
-from .views import index, create, detail, delete, update
+from .views import index, create, detail, delete, update, main2
 from django.conf import settings
 from django.conf.urls.static import static
-=======
-from .views import index, create, detail, delete, update, main2
-
->>>>>>> pm
 
 urlpatterns = [
     path('', main2, name="main2"),
