@@ -1,10 +1,16 @@
 from django.urls import path
+<<<<<<< HEAD
 from .views import index, create, detail, delete, update
 from django.conf import settings
 from django.conf.urls.static import static
+=======
+from .views import index, create, detail, delete, update, main2
+
+>>>>>>> pm
 
 urlpatterns = [
-    path('', index, name="index"),
+    path('', main2, name="main2"),
+    path('index/', index, name="index"),
     path('create/', create, name="create"),
     path('detail/<int:Ob_id>', detail, name="detail"),
     path('delete/<int:Ob_id>', delete, name="delete"),
