@@ -57,3 +57,6 @@ def delete(request, Ob_id):
     my_Ob = Ob.objects.get(pk=Ob_id)
     my_Ob.delete()
     return redirect('index')
+
+def main2(request):
+    return render(request, 'main2.html')
