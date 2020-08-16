@@ -4,6 +4,8 @@ from .models import Ob
 
 
 # index - 모든 글
+
+
 def index(request):
     all_Ob = Ob.objects.all()
     return render(request, 'index.html', {'all_Ob':all_Ob})
@@ -50,7 +52,6 @@ def update(request, Ob_id):
     
     else:
         return render(request, 'update.html', {'Ob':post})
-
 
 
 def delete(request, Ob_id):
