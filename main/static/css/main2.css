@@ -9,3 +9,35 @@ html {
     font-family: 'Noto Sans KR', sans-serif;
     font-weight: 400;
 }
+
+.main-div { 
+    width: 100%; 
+    height: 100vh; 
+    display: -webkit-box; 
+    display: -ms-flexbox; 
+    display: flex; 
+    -webkit-box-align: center; 
+    -ms-flex-align: center; 
+    align-items: center; 
+    -webkit-box-pack: center;
+     -ms-flex-pack: center; 
+     justify-content: center;
+ } 
+     
+.main-container { 
+    text-align: center; 
+    padding: 2em; 
+}
+
+.btn-area {
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    
+}
