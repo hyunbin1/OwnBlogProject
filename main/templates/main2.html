@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'css/main2.css' %}" />
+    <title>main</title>
+  </head>
+  <body style="background-color: #a9d0f5;">
+    <div style="margin: auto;">감성글</div>
+    <div class="btn-area" style="margin: auto;">
+      <a href="{% url 'login' %}">
+        <button id="mainbtn" type="submit">로그인 하러 가기</button>
+      </a>
+    </div>
+  </body>
+</html>
