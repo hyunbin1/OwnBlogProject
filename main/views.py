@@ -10,15 +10,16 @@ def index(request):
     all_Ob = Ob.objects.all()
     return render(request, 'index.html', {'all_Ob':all_Ob})
 
+
 # create - 게시물 작성
 def create(request):
-    if request.method =="POST":
-        filled_form = ObForm(request.POST)
-        if filled_form.is_valid():
-            filled_form.save()
-            return redirect('index')
-    Ob_form = ObForm()
-    return render(request, 'create.html', {'Ob_form':Ob_form})
+    if(request.method == 'POST'):
+        post = Ob()
+        post.title = request.POST['title']
+        post.image = request.POST['image']
+        post.content = request.POST['content']
+        post.save()
+    return redirect('index')
 
 
 # detail - 상세 페이지
